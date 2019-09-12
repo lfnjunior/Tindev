@@ -3,7 +3,8 @@
 - Aplicação feita para encontrar outros desenvolvedores e fazer parcerias, isso de acordo com o perfil do GitHub de cada desenvolvedor.
 - Se dois programadores visualizarem o perfil um do outro e clicarem no  "Like", o Tindev dispara uma notificação de match para os dois usuários.
 - O desenvolvimento ocorreu durante a Semana Omnistack 8 oferecida pela [Rocketseat](https://github.com/Rocketseat), tendo como instrutor [Diego Fernandes](https://github.com/diego3g).
-#####Valeu Rocketseat, vocês são foda!  
+
+####Valeu Rocketseat, vocês são foda!  
 
 ### Desenvolvimento
 
