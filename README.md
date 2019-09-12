@@ -21,4 +21,4 @@
 
 ## Networking
 
-#### Linkedin <a href="http://linkedin.com/in/leonaldo-nunes-4a3132188" target="_blank">Junior, L F Nunes</a>.# Tindev
+#### Linkedin <a href="http://linkedin.com/in/leonaldo-nunes-4a3132188" target="_blank">Junior, L F Nunes</a>.
