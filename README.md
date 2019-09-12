@@ -1,4 +1,8 @@
-# Tindev App
+## Acesse
+
+#### Tindev - [app.tindev.ga](http://app.tindev.ga)
+
+## Tindev App
 
 - Aplicação feita para encontrar outros desenvolvedores e fazer parcerias, isso de acordo com o perfil do GitHub de cada desenvolvedor.
 - Se dois programadores visualizarem o perfil um do outro e clicarem no  "Like", o Tindev dispara uma notificação de match para os dois usuários.
@@ -14,10 +18,6 @@
 - Mobile - em React-Native.
 - Armazenamento - MongoDB.
 - WebSocket - para realizar "match" entre usuários.
-
-### Acesse
-#### Tindev - [app.tindev.ga](http://app.tindev.ga)
-
 
 ## Networking
 
