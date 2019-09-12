@@ -16,7 +16,7 @@
 - WebSocket - para realizar "match" entre usuários.
 
 ### Acesse
-#### Tindev - [app.tindev.ga](http://app.tindev.ga")
+#### Tindev - [app.tindev.ga](http://app.tindev.ga)
 
 
 ## Networking
