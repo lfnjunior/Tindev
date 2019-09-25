@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  tindev-backend:
+    build: .
+    ports:
+      - "3000:3000"
+    command: yarn start
+    depends_on: 
+      - mongo
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+

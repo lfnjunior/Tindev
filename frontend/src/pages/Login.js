@@ -1,31 +1,43 @@
 import React, { useState } from 'react';
 import './Login.css';
+import logo from '../assets/logo.svg';
+
 import api from '../services/api';
-import logo from '../assets/logo.svg'
+import Alert from '../Components/Alert/Alert';
 
 export default function Login({ history }) {
     const [username, setUsername] = useState('');
+    const [alert, setAlert] = useState(null);
+
     async function handleSubmit(e) {
-        e.preventDefault();
-        const response = await api.post('/devs', {
+        e.preventDefault()
+        setAlert(null);
+        //grava usuário no via api nodejs no backend
+        const resposta = await api.post('/devs', {
             username
-        });
-        const { _id } = response.data;
-        history.push(`/dev/${_id}`);
+        })
+        if (resposta.data._id) {
+            const { _id } = resposta.data;
+            history.push(`/dev/${_id}`);
+        } else {
+            setAlert('Conta GitHub não encontrada!')
+        }
     }
 
     return (
-        <div className="login-container">
+        <div className="login-container" >
             <form onSubmit={handleSubmit}>
-                <img src={logo} alt="Tindev" />
+                <img className="logotipo" src={logo} alt="Tindev" />
                 <input
-                    placeholder="Digite seu usuário no Github."
+                    placeholder="Acesse com sua conta do Github"
                     value={username}
                     onChange={e => setUsername(e.target.value)}
                 />
-                <button type="submit">Enviar</button>
+                <button className="btnSend" type="submit">Enviar</button>
             </form>
+            { alert && 
+                <Alert color="danger" message={alert} />
+            }
         </div>
     );
 }
-

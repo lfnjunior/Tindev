@@ -1,0 +1,24 @@
+
+#Alert {
+    position: fixed;
+    top: 5px; 
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    -webkit-animation: fadeinout 6s linear 1 forwards;
+    animation: fadeinout 6s linear 1 forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
