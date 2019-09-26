@@ -1,6 +1,6 @@
 ## Acesse
 
-#### Tindev - [app.tindev.ga](http://app.tindev.ga)
+#### Tindev - [app.tindev.ga](https://app.tindev.ga)
 
 ## Tindev App
 
