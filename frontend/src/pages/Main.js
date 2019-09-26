@@ -35,6 +35,11 @@ export default function Main({ match }) {
         socket.on('match', dev => {
             setMatchDev(dev);
         })
+        socket.on('userIn', newListUsers => {
+            console.log("New list")
+            console.log(newListUsers)
+            setUsers(newListUsers);
+        })
     }, [match.params.id]);
 
     //gerar like

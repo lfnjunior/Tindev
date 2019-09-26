@@ -35,7 +35,7 @@ app.use((req,res,next) => {
 app.use(cors());
 app.use(express.json()); 
 app.use(routes); 
-server.listen(3000);  
+server.listen(3001);  
    
 
 //M - Model        Abstração da estrutura do banco de dados

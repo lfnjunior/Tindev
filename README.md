@@ -10,6 +10,12 @@
 
 ### Valeu Rocketseat, vocês são foda!  
 
+## Funcionalidades Extras
+
+- [x] Quando um novo usuário acessa, é enviada uma lista atualizada (com o novo usuário) para todos os demais usuários logados.
+- [] Mensagem de feedback ao acessar (quando não conseguir acessar).
+- [] Cards [Responsive Touch Slider Using Html CSS & jQuery](https://www.youtube.com/watch?v=kw1wnvWjgCw&t=469s).
+
 ### Desenvolvimento
 
 - Consulta a api externa do GitHub.

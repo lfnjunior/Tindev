@@ -31,7 +31,8 @@ module.exports = {
             //console.log(userExists)
             return res.json(userExists);
         }
-
+        
+        console.log(username)
         const response = await axios.get(`https://api.github.com/users/${username}`)
         .catch((e)=>{
             return res.json({message : 'not found user in github'})
@@ -42,9 +43,9 @@ module.exports = {
         if (!response.data.name) {
             return res.json({message : 'user dont have a name'})    
         }
-        if (!response.data.bio) {
-            return res.json({message : 'user dont have a bio'})    
-        }
+        // if (!response.data.bio) {
+        //     return res.json({message : 'user dont have a bio'})    
+        // }
         if (!response.data.avatar_url) {
             return res.json({message : 'user dont have a avatar url'})    
         }
@@ -61,6 +62,23 @@ module.exports = {
             return res.json({message : 'can not create dev in mongodb'})    
         }); 
         //console.log(dev)
+
+        const users = await Dev.find({
+            $and: [
+                { _id: { $ne: dev } }
+            ],
+        });
+
+        await users.map( usuario =>{
+            const loggedSocket = req.connectedUsers[usuario._id];
+            if (loggedSocket) {
+                Dev.find({$and:[{ _id: { $ne: usuario._id } }]}).then((newListUsers) =>{
+                    console.log(`Usuario logado ${usuario.name} vai receber nova lista com ${newListUsers.length} usuários`)
+                    req.io.to(loggedSocket).emit('userIn', newListUsers)
+                });
+            }    
+        })  
+
         return res.json(dev)
     }
 }
