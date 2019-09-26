@@ -23,8 +23,7 @@ io.on('connection', socket => {
 //     console.log(req);
 //     return res.send({message : `E ai ${req.query.name} ?`});
 // });
-mongoose.connect(`mongodb://35.247.198.63/tindev`,{ useNewUrlParser : true });
-//mongoose.connect(`mongodb://localhost/tindev`,{ useNewUrlParser : true });
+mongoose.connect(`mongodb://localhost/tindev`,{ useNewUrlParser : true });
 app.use((req,res,next) => {
     req.io = io;
     req.connectedUsers = connectedUsers; 
