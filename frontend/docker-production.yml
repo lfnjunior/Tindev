@@ -1,17 +1,30 @@
-version: "3"
-
+version: "3.3"
+# https://docs.traefik.io/v2.0/user-guides/docker-compose/acme-tls/
 services:
 
-  tindev-frontend:
-    labels:
-      - traefik.enable=true
-      - traefik.frontend.rule=Host:app.tindev.ga
-
-  reverse-proxy:
-    image: traefik
-    command: --api --docker.exposedbydefault=false
+  traefik:
+    image: "traefik:v2.0.0-rc3"
+    container_name: "traefik"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.mytlschallenge.acme.tlschallenge=true"
+      - "--certificatesresolvers.mytlschallenge.acme.email=leonaldofnunes@gmail.com"
+      - "--certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json"
     ports:
-      - "80:80"
+      - "443:443"
       - "8080:8080"
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "./letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  tindev-frontend:
+    image: "containous/tindev"
+    container_name: "simple-service"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.tindev.rule=Host(`app.tindev.ga`)"
+      - "traefik.http.routers.tindev.entrypoints=websecure"
+      - "traefik.http.routers.tindev.tls.certresolver=mytlschallenge"
