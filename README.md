@@ -14,7 +14,7 @@
 
 - [x] Quando um novo usuário acessa, é enviada uma lista atualizada (com o novo usuário) para todos os demais usuários logados.
 - [ ] Mensagem de feedback ao tentar acessar (quando não conseguir acessar explicar o motivo).
-- [ ] Cards [Responsive Touch Slider Using Html CSS & jQuery](https://www.youtube.com/watch?v=kw1wnvWjgCw&t=469s).
+- [ ] Cards [Responsive Touch Slider Using Html CSS & jQuery](https://www.youtube.com/watch?v=kw1wnvWjgCw&t=469s) ou [React-Spring Flick Animation](https://codesandbox.io/embed/j0y0vpz59).
 - [ ] Chat usuários logados.
 - [ ] Chat privado usuários com match.
 - [ ] SuperLike.
@@ -30,4 +30,7 @@
 
 ## Networking
 
-#### Linkedin <a href="http://linkedin.com/in/leonaldo-nunes-4a3132188" target="_blank">Junior, L F Nunes</a>.
+#### Linkedin <a href="https://www.linkedin.com/in/leonaldo-nunes-4a3132188" target="_blank">Junior, L F Nunes</a>.
+#### Linkedin <a href="https://www.linkedin.com/in/michel-de-jesus-966187164" target="_blank">Michel de Jesus</a>.
+
+
